@@ -14,6 +14,7 @@ $ sudo chmod 640 ./wp-config.php
 $ sudo chown -R www-data:www-data . -R
 $ sudo chown $USER:$USER .git -R
 $ sudo chown $USER:$USER docker/ -R
+$ sudo chmod 777 docker -R
 ```
 
 ## Compilar
