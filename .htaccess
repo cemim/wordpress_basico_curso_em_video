@@ -1,0 +1,27 @@
+
+# BEGIN WordPress
+# As diretrizes (linhas) entre "BEGIN WordPress" e "END WordPress" são
+# geradas dinamicamente e só devem ser modificadas através de filtros do WordPress.
+# Quaisquer alterações nas diretivas entre esses marcadores serão sobrescritas.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+# BEGIN WP CERBER GROOVE
+# Protection of admin scripts is enabled (CVE-2018-6389)
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_URI} ^(.*)wp-admin/+load-scripts\.php$ [OR,NC]
+RewriteCond %{REQUEST_URI} ^(.*)wp-admin/+load-styles\.php$ [NC]
+RewriteCond %{HTTP_COOKIE} !cerber_groove_x_9OMpG6hYUaALuTVJkjeECfWmqr7o423I=D0kxs8ptruijZeRcONFKz19Cd3nq
+RewriteRule (.*) - [R=403,L]
+</IfModule>
+# END WP CERBER GROOVE
