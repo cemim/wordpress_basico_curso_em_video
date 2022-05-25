@@ -12,6 +12,7 @@ $ sudo find . -type d -exec chmod 775 {} \;
 $ sudo find . -type f -exec chmod 664 {} \;
 $ sudo chmod 640 ./wp-config.php 
 $ sudo chown -R www-data:www-data . -R
+$ sudo chown $USER:$USER .git -R
 ```
 
 ## Compilar

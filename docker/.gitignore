@@ -1,5 +1,5 @@
-/.env
+#/.env
 /.vscode
-/data/*
-/logs/*
+#/data/*
+#/logs/*
 .DS_Store
