@@ -3,3 +3,14 @@
 #/data/*
 logs/*
 .DS_Store
+
+# Arquivos do antispam
+/data/mysql/docker/cev_actionscheduler_claims.ibd
+/docker/data/mysql/docker/cev_cerber_sets.ibd
+/data/mysql/docker/cev_options.ibd
+/data/mysql/ib_logfile0
+/data/mysql/ib_logfile1
+/data/mysql/ibdata1
+/data/mysql/ibtmp1
+/data/mysql/mysql/innodb_index_stats.ibd
+/data/mysql/mysql/innodb_table_stats.ibd
